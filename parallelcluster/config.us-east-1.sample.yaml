@@ -55,6 +55,13 @@ Scheduling:
     - Name: compute-od-1
       CapacityType: ONDEMAND
       ComputeResources:
+        - Name: c6i-4xlarge
+          DisableSimultaneousMultithreading: true
+          Efa:
+            Enabled: true
+          InstanceType: c6i.4xlarge
+          MaxCount: 2
+          MinCount: 0
         - Name: c6i-32xlarge
           DisableSimultaneousMultithreading: true
           Efa:
